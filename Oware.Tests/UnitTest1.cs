@@ -10,9 +10,14 @@ namespace Oware.Tests
         }
 
         [Test]
-        public void Test1()
+        public void WhenResettingHouseSeedCountIs4()
         {
-            Assert.Pass();
+            //Arrange:
+            House hs= new House (0,0);
+            //Act:
+            hs.ResetHouse();
+            //Assert:
+            Assert.AreEqual(4,hs.GetCount(),"When we reset a house it should have 4 seeds");
         }
     }
 }
